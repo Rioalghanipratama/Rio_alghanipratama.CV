@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Rio Alghani Pratama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Rio Alghani</a>
+      <nav class="nav">
+        <a href="index.html">Profil</a>
+        <a href="cv.html">CV</a>
+        <a href="#" id="openContactNav">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 style="margin-top:26px">Portfolio</h1>
+    <p class="lead">Beberapa proyek dan latihan yang relevan dengan web development, analisis data, dan UI/UX.</p>
+
+    <section class="projects" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:18px">
+      <article class="card" style="padding:18px; max-width:none;">
+        <h3>Project A — Web App (React)</h3>
+        <p class="lead" style="margin:8px 0 12px 0; color:var(--muted)">Deskripsi singkat project: sistem pencatatan akademik bergaya modern.</p>
+        <p><strong>Peran:</strong> Frontend</p>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener">Lihat detail</a>
+      </article>
+
+      <article class="card" style="padding:18px; max-width:none;">
+        <h3>Project B — Analisis Data</h3>
+        <p class="lead" style="margin:8px 0 12px 0; color:var(--muted)">Analisis dataset kampus menggunakan Python & visualisasi interaktif.</p>
+        <p><strong>Peran:</strong> Data Analyst</p>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener">Lihat detail</a>
+      </article>
+
+      <article class="card" style="padding:18px; max-width:none;">
+        <h3>Project C — Prototipe UI/UX</h3>
+        <p class="lead" style="margin:8px 0 12px 0; color:var(--muted)">Wireframe dan prototipe untuk aplikasi mobile kampus.</p>
+        <p><strong>Peran:</strong> Designer</p>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener">Lihat mockup</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer container"><small>© <span id="year2"></span> Rio Alghani Pratama</small></footer>
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+    // reuse contact modal from index by opening index? If you want modal here, include contact modal markup as in index.html
+    document.getElementById('openContactNav')?.addEventListener('click', ()=> location.href = 'index.html#contactTitle');
+  </script>
+</body>
+</html>

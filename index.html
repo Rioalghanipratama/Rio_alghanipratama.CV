@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profil — Rio Alghani Pratama | Sistem Informasi</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Rio Alghani</a>
+      <nav class="nav">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="cv.html">CV</a>
+        <button id="themeToggle" class="icon-btn" aria-pressed="true" title="Toggle theme">🌙</button>
+        <button id="openContact" class="btn small">Kontak</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page container">
+    <div class="bg-shapes" aria-hidden="true">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="blob b3"></span>
+    </div>
+
+    <section class="card" id="profileCard" aria-labelledby="profileName">
+      <div class="card-left">
+        <div class="photo-wrap" id="photoWrap">
+          <img src="fotoprofil.jpg" alt="Foto profil Rio Alghani Pratama" id="profilePhoto" class="photo">
+          <div class="photo-ring" aria-hidden="true"></div>
+        </div>
+        <div class="socials">
+          <a href="#" title="LinkedIn" aria-label="LinkedIn" class="icon">in</a>
+          <a href="#" title="GitHub" aria-label="GitHub" class="icon">gh</a>
+          <button id="copyEmailBtn" title="Salin email" class="icon" aria-label="Salin email">@</button>
+        </div>
+      </div>
+
+      <div class="card-right">
+        <h1 id="profileName">Rio Alghani Pratama</h1>
+        <h2 class="role"><span id="roleText" aria-live="polite"></span><span class="cursor">|</span></h2>
+        <p class="lead">
+          Mahasiswa Sistem Informasi yang fokus pada pengembangan web, analisis data, dan pengalaman pengguna. Aktif di kegiatan kampus, tertarik pada solusi yang memadukan data dan desain.
+        </p>
+
+        <div class="meta">
+          <div class="meta-item">
+            <strong>Tahun</strong>
+            <span>2023 — Sekarang</span>
+          </div>
+          <div class="meta-item">
+            <strong>Fakultas</strong>
+            <span>Teknologi Informasi</span>
+          </div>
+          <div class="meta-item">
+            <strong>Email</strong>
+            <span id="emailText">rioalghani@email.com</span>
+          </div>
+        </div>
+
+        <h3 class="section-title">Keahlian</h3>
+        <ul class="skills">
+          <li>
+            <div class="skill-head">
+              <span>Web Development</span><span>85%</span>
+            </div>
+            <div class="bar"><div class="bar-fill" data-fill="85"></div></div>
+          </li>
+          <li>
+            <div class="skill-head">
+              <span>Analisis Data</span><span>72%</span>
+            </div>
+            <div class="bar"><div class="bar-fill" data-fill="72"></div></div>
+          </li>
+          <li>
+            <div class="skill-head">
+              <span>UI/UX</span><span>68%</span>
+            </div>
+            <div class="bar"><div class="bar-fill" data-fill="68"></div></div>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <button id="contactBtn" class="btn primary">Kontak Saya</button>
+          <a href="cv.html" class="btn ghost">Lihat CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact modal with form (uses Formspree by default) -->
+  <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="contactTitle">
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose" aria-label="Tutup">✕</button>
+      <h3 id="contactTitle">Hubungi Saya</h3>
+
+      <!--
+        To enable email sending:
+        1) Option A (recommended, no-code): create a Formspree form and replace the ACTION URL below:
+           action="https://formspree.io/f/yourFormId"
+        2) Option B: integrate EmailJS (client-side SDK) — you'll need to include their script and credentials.
+      -->
+      <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/yourFormId">
+        <label>
+          Nama
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Pesan
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Kirim</button>
+          <button type="button" id="contactCancel" class="btn ghost">Batal</button>
+        </div>
+
+        <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+      </form>
+
+      <hr>
+      <div class="contact-list small">
+        <div><strong>Email:</strong> <span id="modalEmailText">rioalghani@email.com</span>
+          <button class="copy small" data-copy="#modalEmailText">Salin</button>
+        </div>
+        <div><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">linkedin.com/in/rioalghani</a></div>
+        <div><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener">github.com/rioalghani</a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer container">
+    <small>© <span id="year"></span> Rio Alghani Pratama — Mahasiswa Sistem Informasi</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

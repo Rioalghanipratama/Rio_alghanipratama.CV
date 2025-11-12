@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Rio Alghani Pratama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Rio Alghani</a>
+      <nav class="nav">
+        <a href="index.html">Profil</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page" style="padding-bottom:60px">
+    <section class="card" style="padding:22px;">
+      <h1>Curriculum Vitae</h1>
+      <p class="lead">Ringkasan pendidikan, pengalaman, dan kemampuan.</p>
+
+      <h3>Informasi</h3>
+      <p><strong>Email:</strong> <span id="cvEmail">rioalghani@email.com</span></p>
+
+      <h3>Pendidikan</h3>
+      <ul>
+        <li>S1 Sistem Informasi — Universitas Contoh (2023 — Sekarang)</li>
+      </ul>
+
+      <h3>Pengalaman & Organisasi</h3>
+      <ul>
+        <li>Anggota organisasi teknologi kampus — 2023 — sekarang</li>
+      </ul>
+
+      <h3>Kemampuan</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript, React</li>
+        <li>Analisis data (Python, Pandas), Visualisasi</li>
+        <li>UI/UX — Figma, prototyping</li>
+      </ul>
+
+      <div style="margin-top:12px">
+        <a class="btn primary" href="files/Rio_Alghani_CV.pdf" download>Unduh CV (PDF)</a>
+        <a class="btn ghost" href="index.html">Kembali ke Profil</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container"><small>© <span id="year3"></span> Rio Alghani Pratama</small></footer>
+  <script> document.getElementById('year3').textContent = new Date().getFullYear(); </script>
+</body>
+</html>
